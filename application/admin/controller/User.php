@@ -24,7 +24,7 @@ class User extends Admin{
         $nickname       =   input('nickname');
         $map['status']  =   array('egt',0);
         if(is_numeric($nickname)){
-            $map['uid|nickname']=   array(intval($nickname),array('like','%'.$nickname.'%'),'_multi'=>true);
+            $map['uid|nickname']=   array('like','%'.$nickname.'%');
         }else{
             $map['nickname']    =   array('like', '%'.(string)$nickname.'%');
         }
