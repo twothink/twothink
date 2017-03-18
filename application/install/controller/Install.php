@@ -8,11 +8,10 @@
 // +----------------------------------------------------------------------
 
 namespace app\install\controller;
-use think\Controller;
 use think\Db;
 use com\Storage;
 
-class Install extends Controller{
+class Install extends \think\Controller{
 
     protected function _initialize(){
         if(is_file('./static/data/install.lock')){
