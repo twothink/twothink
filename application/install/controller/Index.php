@@ -12,24 +12,21 @@ namespace app\install\controller;
 class Index extends \think\Controller{
     //安装首页
     public function index(){
-        echo 'dd';
-//    	session('update',null);
-//        if(is_file(APP_PATH . 'database.php')){
-//            // 已经安装过了 执行更新程序
-//            session('update',true);
-//            $msg = '请删除install.lock文件后再运行升级!';
-//        }else{
-//            $msg = '已经成功安装了TwoThink，请不要重复安装!';
-//        }
-//
-//        if(is_file('./static/data/install.lock')){
-//            $this->error($msg);
-//        }
-//        return $this->fetch();
+    	session('update',null);
+        if(is_file(APP_PATH . 'database.php')){
+            // 已经安装过了 执行更新程序
+            session('update',true);
+            $msg = '请删除install.lock文件后再运行升级!';
+        }else{
+            $msg = '已经成功安装了TwoThink，请不要重复安装!';
+        }
+
+        if(is_file('./static/data/install.lock')){
+            $this->error($msg);
+        }
+        return $this->fetch();
     }
-    public function iss(){
-        echo 'iss';
-    }
+
     //安装完成
     public function complete(){
         $step = session('step');
