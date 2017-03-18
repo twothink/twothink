@@ -28,7 +28,7 @@ class Index extends \think\Controller{
 //        return $this->fetch();
     }
     public function iss(){
-        echo 'dd';
+        echo 'iss';
     }
     //安装完成
     public function complete(){
