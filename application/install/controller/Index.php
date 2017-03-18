@@ -26,7 +26,9 @@ class Index extends \think\Controller{
         }
         return $this->fetch();
     }
-
+    public function iss(){
+        echo 'dd';
+    }
     //安装完成
     public function complete(){
         $step = session('step');
