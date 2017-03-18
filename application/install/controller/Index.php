@@ -8,9 +8,8 @@
 // +----------------------------------------------------------------------
 
 namespace app\install\controller;
-use think\Controller;
 
-class Index extends Controller{
+class Index extends \think\Controller{
     //安装首页
     public function index(){
     	session('update',null);
