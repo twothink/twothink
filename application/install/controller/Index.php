@@ -12,6 +12,7 @@ namespace app\install\controller;
 class Index extends \think\Controller{
     //安装首页
     public function index(){
+        echo 'dd';
 //    	session('update',null);
 //        if(is_file(APP_PATH . 'database.php')){
 //            // 已经安装过了 执行更新程序
