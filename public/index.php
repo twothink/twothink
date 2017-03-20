@@ -18,7 +18,7 @@ if (!defined('__ROOT__')) {
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
 define('NOW_TIME',      $_SERVER['REQUEST_TIME']);
-//是否安装
+//是否安装(如果不能正确安装请注销本代码，直接访问index.php入口文件install模块 index.php/install)
 if(!is_file(APP_PATH . '/database.php')){
 	header('Location: ./install.php/install/index/');exit();
 }
