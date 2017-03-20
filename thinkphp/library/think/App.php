@@ -365,6 +365,7 @@ class App
         Hook::listen('module_init', $request);
 
         $instance = Loader::controller($controller, $config['url_controller_layer'], $config['controller_suffix'], $config['empty_controller']);
+        dump($instance);
         if (is_null($instance)) {
             throw new HttpException(404, 'controller not exists:' . Loader::parseName($controller, 1));
         }
