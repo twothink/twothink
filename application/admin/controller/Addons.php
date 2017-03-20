@@ -225,7 +225,7 @@ class {$data['info']['name']} extends Model{
 }
 
 str;
-			file_put_contents ( "{$addon_dir}Model/{$data['info']['name']}.php", $addonModel );
+			file_put_contents ( "{$addon_dir}Model/".ucfirst($data['info']['name']).".php", $addonModel );
 		}
 
 		if (isset ( $data ['has_config'] ) && $data ['has_config'] == 1)
