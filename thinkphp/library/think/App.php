@@ -346,7 +346,7 @@ class App
             $request->module($module);
         }
         // 当前模块路径
-        App::$modulePath = APP_PATH . ($module ? $module . DS : '');
+       echo App::$modulePath = APP_PATH . ($module ? $module . DS : '');
 
         // 是否自动转换控制器和操作名
         $convert = is_bool($convert) ? $convert : $config['url_convert'];
@@ -365,7 +365,6 @@ class App
         Hook::listen('module_init', $request);
 
         $instance = Loader::controller($controller, $config['url_controller_layer'], $config['controller_suffix'], $config['empty_controller']);
-        dump($instance);
         if (is_null($instance)) {
             throw new HttpException(404, 'controller not exists:' . Loader::parseName($controller, 1));
         }
