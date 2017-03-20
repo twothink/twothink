@@ -20,9 +20,7 @@ define('APP_PATH', __DIR__ . '/../application/');
 define('NOW_TIME',      $_SERVER['REQUEST_TIME']);
 //是否安装
 if(!is_file(APP_PATH . '/database.php')){
-    $module_name = \think\Request::instance()->module();
-    print_r($module_name);
-//	header('Location: ./install.php/install/index/'.$module_name);exit();
+	header('Location:'.url('install/index'));exit();
 }
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
