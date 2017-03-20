@@ -184,7 +184,7 @@ class {$data['info']['name']} extends Addons{
 }
 
 str;
-			file_put_contents ( "{$addon_dir}controller/{$data['info']['name']}.php", $addonController );
+			file_put_contents ( "{$addon_dir}controller/".ucfirst($data['info']['name']).".php", $addonController );
 			$addonModel = <<<str
 <?php
 
