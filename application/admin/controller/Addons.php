@@ -176,8 +176,8 @@ str;
 			$addonController = <<<str
 <?php
 
-namespace addons\\{$data['info']['name']}\controller;
-use Home\Controller\Addons;
+namespace addons\\{$data['info']['name']}\controller; 
+use app\home\controller\Addons;
 
 class {$data['info']['name']} extends Addons{
 
