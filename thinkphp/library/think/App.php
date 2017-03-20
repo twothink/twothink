@@ -360,7 +360,7 @@ class App
 
         // 设置当前请求的控制器、操作
         $request->controller(Loader::parseName($controller, 1))->action($actionName);
-dump($request->controller());
+
         // 监听module_init
         Hook::listen('module_init', $request);
 
