@@ -19,8 +19,8 @@ if (!defined('__ROOT__')) {
 define('APP_PATH', __DIR__ . '/../application/');
 define('NOW_TIME',      $_SERVER['REQUEST_TIME']);
 //是否安装(如果不能正确安装请注销本代码，直接访问index.php入口文件install模块 index.php/install)
-if(!is_file(APP_PATH . '/database.php')){
-	header('Location: ./install.php/install/index/');exit();
-}
+//if(!is_file(APP_PATH . '/database.php')){
+//	header('Location: ./install.php/install/index/');exit();
+//}
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
