@@ -7,7 +7,7 @@ if (!defined('__ROOT__')) {
     $_root = rtrim(dirname(rtrim($_SERVER['SCRIPT_NAME'], '/')), '/');
     define('__ROOT__', (('/' == $_root || '\\' == $_root) ? '' : $_root));
 }
-//define ( 'BIND_MODULE','install');
+define ( 'BIND_MODULE','install');
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
 define('NOW_TIME',      $_SERVER['REQUEST_TIME']);
