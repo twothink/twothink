@@ -7,8 +7,12 @@ if (!defined('__ROOT__')) {
     $_root = rtrim(dirname(rtrim($_SERVER['SCRIPT_NAME'], '/')), '/');
     define('__ROOT__', (('/' == $_root || '\\' == $_root) ? '' : $_root));
 }
-//define ( 'BIND_MODULE','install');
+// 绑定当前入口文件到install模块
+\think\Route::bind('install');
+// 关闭admin模块的路由
+\think\App::route(false);
 // 定义应用目录
+
 define('APP_PATH', __DIR__ . '/../application/');
 define('NOW_TIME',      $_SERVER['REQUEST_TIME']);
 // 加载框架引导文件
