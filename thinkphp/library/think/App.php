@@ -346,7 +346,7 @@ class App
             $request->module($module);
         }
         // 当前模块路径
-       echo App::$modulePath = APP_PATH . ($module ? $module . DS : '');
+        App::$modulePath = APP_PATH . ($module ? $module . DS : '');
 
         // 是否自动转换控制器和操作名
         $convert = is_bool($convert) ? $convert : $config['url_convert'];
@@ -359,7 +359,7 @@ class App
         $actionName = $convert ? strtolower($actionName) : $actionName;
 
         // 设置当前请求的控制器、操作
-        $request->controller(Loader::parseName($controller, 1))->action($actionName);
+       echo $request->controller(Loader::parseName($controller, 1))->action($actionName);
 
         // 监听module_init
         Hook::listen('module_init', $request);
